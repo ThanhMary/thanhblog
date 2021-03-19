@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+       <div class="row">
+       <div class="col-md-5" style='border: 5px; padding: 20px; background-color: #3B5145;' >
+       <img src="https://3cdhsv4crsio1kakza23qz4h-wpengine.netdna-ssl.com/wp-content/themes/login-radius/images/center-small/social-login--a-wealth-of-first-party-customer-data.svg"  style='width: 400px; height: 300px' alt="">
+       </div>
+           <div class="col-md-5" style='border: 5px; padding: 20px; background-color: #D5F5E3;'>
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                        <form action="{{path('security_login')}}" method="post">
+                            <div class="form-group">
+                                <input type="text" placeholder="Adresse email..." class = "form-control" required name = "_username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Mot de passe..." class = "form-control" required name = "_password">
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success">Connexion</button>
+                            </div>
+                        
+                        </form>
+
+        </div>
+             <div class="col-md-2" style='border: 5px; padding: 20px; background-color: #3B5145;' >
+        
+        </div>
+{% endblock %}
